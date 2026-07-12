@@ -1,3 +1,7 @@
+output "kusto_eventgrid_data_connections_id" {
+  description = "Map of id values across all kusto_eventgrid_data_connections, keyed the same as var.kusto_eventgrid_data_connections"
+  value       = { for k, v in azurerm_kusto_eventgrid_data_connection.kusto_eventgrid_data_connections : k => v.id }
+}
 output "kusto_eventgrid_data_connections_blob_storage_event_type" {
   description = "Map of blob_storage_event_type values across all kusto_eventgrid_data_connections, keyed the same as var.kusto_eventgrid_data_connections"
   value       = { for k, v in azurerm_kusto_eventgrid_data_connection.kusto_eventgrid_data_connections : k => v.blob_storage_event_type }
