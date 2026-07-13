@@ -36,10 +36,10 @@ EOT
     managed_identity_resource_id    = optional(string)
     managed_identity_id             = optional(string)
     eventgrid_resource_id           = optional(string)
-    blob_storage_event_type         = optional(string) # Default: "Microsoft.Storage.BlobCreated"
-    database_routing_type           = optional(string) # Default: "Single"
+    blob_storage_event_type         = optional(string)
+    database_routing_type           = optional(string)
     data_format                     = optional(string)
-    skip_first_record               = optional(bool) # Default: false
+    skip_first_record               = optional(bool)
     eventgrid_event_subscription_id = optional(string)
     table_name                      = optional(string)
   }))
