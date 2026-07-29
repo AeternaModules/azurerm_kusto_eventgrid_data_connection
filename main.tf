@@ -9,15 +9,13 @@ resource "azurerm_kusto_eventgrid_data_connection" "kusto_eventgrid_data_connect
   name                            = each.value.name
   resource_group_name             = each.value.resource_group_name
   storage_account_id              = each.value.storage_account_id
-  mapping_rule_name               = each.value.mapping_rule_name
-  managed_identity_resource_id    = each.value.managed_identity_resource_id
-  managed_identity_id             = each.value.managed_identity_id
-  eventgrid_resource_id           = each.value.eventgrid_resource_id
   blob_storage_event_type         = each.value.blob_storage_event_type
-  database_routing_type           = each.value.database_routing_type
   data_format                     = each.value.data_format
-  skip_first_record               = each.value.skip_first_record
+  database_routing_type           = each.value.database_routing_type
   eventgrid_event_subscription_id = each.value.eventgrid_event_subscription_id
+  managed_identity_id             = each.value.managed_identity_id
+  mapping_rule_name               = each.value.mapping_rule_name
+  skip_first_record               = each.value.skip_first_record
   table_name                      = each.value.table_name
 }
 

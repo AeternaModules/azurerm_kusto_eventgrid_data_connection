@@ -26,10 +26,6 @@ output "kusto_eventgrid_data_connections_eventgrid_event_subscription_id" {
   description = "Map of eventgrid_event_subscription_id values across all kusto_eventgrid_data_connections, keyed the same as var.kusto_eventgrid_data_connections"
   value       = { for k, v in azurerm_kusto_eventgrid_data_connection.kusto_eventgrid_data_connections : k => v.eventgrid_event_subscription_id if v.eventgrid_event_subscription_id != null && length(v.eventgrid_event_subscription_id) > 0 }
 }
-output "kusto_eventgrid_data_connections_eventgrid_resource_id" {
-  description = "Map of eventgrid_resource_id values across all kusto_eventgrid_data_connections, keyed the same as var.kusto_eventgrid_data_connections"
-  value       = { for k, v in azurerm_kusto_eventgrid_data_connection.kusto_eventgrid_data_connections : k => v.eventgrid_resource_id if v.eventgrid_resource_id != null && length(v.eventgrid_resource_id) > 0 }
-}
 output "kusto_eventgrid_data_connections_eventhub_consumer_group_name" {
   description = "Map of eventhub_consumer_group_name values across all kusto_eventgrid_data_connections, keyed the same as var.kusto_eventgrid_data_connections"
   value       = { for k, v in azurerm_kusto_eventgrid_data_connection.kusto_eventgrid_data_connections : k => v.eventhub_consumer_group_name if v.eventhub_consumer_group_name != null && length(v.eventhub_consumer_group_name) > 0 }
@@ -45,10 +41,6 @@ output "kusto_eventgrid_data_connections_location" {
 output "kusto_eventgrid_data_connections_managed_identity_id" {
   description = "Map of managed_identity_id values across all kusto_eventgrid_data_connections, keyed the same as var.kusto_eventgrid_data_connections"
   value       = { for k, v in azurerm_kusto_eventgrid_data_connection.kusto_eventgrid_data_connections : k => v.managed_identity_id if v.managed_identity_id != null && length(v.managed_identity_id) > 0 }
-}
-output "kusto_eventgrid_data_connections_managed_identity_resource_id" {
-  description = "Map of managed_identity_resource_id values across all kusto_eventgrid_data_connections, keyed the same as var.kusto_eventgrid_data_connections"
-  value       = { for k, v in azurerm_kusto_eventgrid_data_connection.kusto_eventgrid_data_connections : k => v.managed_identity_resource_id if v.managed_identity_resource_id != null && length(v.managed_identity_resource_id) > 0 }
 }
 output "kusto_eventgrid_data_connections_mapping_rule_name" {
   description = "Map of mapping_rule_name values across all kusto_eventgrid_data_connections, keyed the same as var.kusto_eventgrid_data_connections"
